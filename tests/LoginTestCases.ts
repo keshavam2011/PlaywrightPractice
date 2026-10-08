@@ -13,5 +13,6 @@ TestData.forEach((data, index) => {
     const loginSuccessURL = await loginPageObj.LoginToSwaglabs(data.userName, data.password);
     expect(loginSuccessURL).toBe("https://www.saucedemo.com/inventory.html");
     await homePageobj.ValidateHomePageItems();
+    console.log(`this is the end of the test $loginURL`)
   });
 });
